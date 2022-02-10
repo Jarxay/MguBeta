@@ -18,7 +18,11 @@ local function SpawnTPFunc()
     plr.Character.HumanoidRootPart.CFrame = CFrame.new(26,4,34)
 end;
 
-local TestWindow = Library:CreateWindow("MGU 2.0");
+
+local function BlazingVortexFunc()
+    plr.Character.HumanoidRootPart.CFrame = CFrame.new(143,91249,112)
+end;
+local TestWindow = Library:CreateWindow("MGU : gg/SyRVxBdNYa");
 Library:SetWatermark('MGU : '.. plr.Name.. ' : Beta');
 Library:Notify('Loading UI...');
 
@@ -37,10 +41,13 @@ Autosell:AddToggle('Autosell', { Text = 'Autosell' });
 UnlockAll:AddButton('Unlock all islands', TeleportAll);
 
 local TeleportTab = TestWindow:AddTab('Teleports (beta)');
-local TeleportBox1 = TeleportTab:AddLeftTabbox('Teleports');
-local TeleportText = TeleportBox1:AddTab('Teleports');
-TeleportText:AddButton('Spawn', SpawnTPFunc);
+local TeleportBox1 = TeleportTab:AddLeftTabbox('Spawn');
+local TeleportText2 = TeleportBox1:AddTab('Teleports');
+TeleportText2:AddButton('Spawn', SpawnTPFunc);
 
+local TeleportBox2 = TeleportTab:AddRightTabbox('Blazing Vortex Island');
+local TeleportText2 = TeleportBox2:AddTab('Blazing Vortex Island');
+TeleportText2:AddButton('Blazing Vortex Island',BlazingVortexFunc);
 local PlayerTabBox1 = PlayerTab:AddLeftTabbox('Speed');
 local PlayerTabBox2 = PlayerTab:AddRightTabbox('High Jump');
 local Speed = PlayerTabBox1:AddTab('Speed');
